@@ -1,21 +1,14 @@
-const array = [1, 2, 3, 1];
-
+const array = [1, 2, 2, 4];
 
 //// My Solution ////
 function checkDuplicateInArray(array) {
   if (!array.length) return "Invalid Array";
-  let result = false;
-  const obj = {};
+  const seen = new Set();
   for (let i = 0; i < array.length; i++) {
-    if (obj[array[i]]) {
-      result= true;
-    } else {
-      obj[array[i]] = true;
-    }
+    if (seen.has(array[i])) return true;
+    seen.add(array[i]);
   }
-
-  return result
+  return false;
 }
 
-
-console.log(checkDuplicateInArray(array))
+console.log(checkDuplicateInArray(array));
