@@ -1,4 +1,4 @@
-const array = [1, 2, 2, 4];
+const array = [1, 2, 3, 4];
 
 //// My Solution ////
 function checkDuplicateInArray(array) {
@@ -11,4 +11,4 @@ function checkDuplicateInArray(array) {
   return false;
 }
 
-console.log(checkDuplicateInArray(array));
+console.log("Duplicate in Array" , checkDuplicateInArray(array));
